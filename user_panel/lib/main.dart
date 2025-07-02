@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
-import 'screens/panel.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(MaterialApp(home: PanelUsuario()));
+  runApp(const UserPanelApp());
+}
+
+class UserPanelApp extends StatelessWidget {
+  const UserPanelApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'User Panel',
+      theme: ThemeData(primarySwatch: Colors.teal),
+      home: const HomeScreen(),
+    );
+  }
 }
